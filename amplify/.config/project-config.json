@@ -9,7 +9,7 @@
     "framework": "none",
     "config": {
       "SourceDir": "src",
-      "DistributionDir": "",
+      "DistributionDir": ".next",
       "BuildCommand": "npm run-script build",
       "StartCommand": "npm run-script start"
     }
