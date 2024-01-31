@@ -1,0 +1,7 @@
+{
+  "lambdaLayers": [],
+  "secretNames": [
+    "NEXT_PUBLIC_AWS_ACCESS_KEY_ID",
+    "NEXT_PUBLIC_AWS_SECRET_ACCESS_KEY"
+  ]
+}

@@ -10,6 +10,24 @@
       "StackName": "amplify-amplify4161d41210ff4-staging-71341",
       "StackId": "arn:aws:cloudformation:us-east-2:591922066311:stack/amplify-amplify4161d41210ff4-staging-71341/c572fdd0-b8f5-11ee-a7ad-0ace42519a47",
       "AmplifyAppId": "d3o1u668gew0s4"
+    },
+    "categories": {
+      "function": {
+        "tasktracker13f9ea9c07": {
+          "secretsPathAmplifyAppId": "d3o1u668gew0s4",
+          "deploymentBucketName": "amplify-amplify4161d41210ff4-staging-71341-deployment",
+          "s3Key": "amplify-builds/tasktracker13f9ea9c07-49734846555654477577-build.zip"
+        },
+        "tasktracker13layerdc063c97": {
+          "deploymentBucketName": "amplify-amplify4161d41210ff4-staging-71341-deployment",
+          "s3Key": "amplify-builds/tasktracker13layerdc063c97-LambdaLayerVersion8ef40442-build.zip"
+        },
+        "tasktracker13ec267b61": {
+          "secretsPathAmplifyAppId": "d3o1u668gew0s4",
+          "deploymentBucketName": "amplify-amplify4161d41210ff4-staging-71341-deployment",
+          "s3Key": "amplify-builds/tasktracker13ec267b61-4f2b76535a46487a5047-build.zip"
+        }
+      }
     }
   }
 }

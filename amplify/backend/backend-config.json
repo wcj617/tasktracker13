@@ -1,1 +1,92 @@
-{}
+{
+  "function": {
+    "tasktracker13e691e07e": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "tasktracker13ec267b61": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "tasktracker13f9ea9c07": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "tasktracker13layerdc063c97": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "LambdaLayer"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_tasktracker13ec267b61_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "tasktracker13ec267b61"
+        }
+      ]
+    },
+    "AMPLIFY_function_tasktracker13ec267b61_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "tasktracker13ec267b61"
+        }
+      ]
+    },
+    "AMPLIFY_function_tasktracker13ec267b61_secretsPathAmplifyAppId": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "tasktracker13ec267b61"
+        }
+      ]
+    },
+    "AMPLIFY_function_tasktracker13f9ea9c07_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "tasktracker13f9ea9c07"
+        }
+      ]
+    },
+    "AMPLIFY_function_tasktracker13f9ea9c07_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "tasktracker13f9ea9c07"
+        }
+      ]
+    },
+    "AMPLIFY_function_tasktracker13f9ea9c07_secretsPathAmplifyAppId": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "tasktracker13f9ea9c07"
+        }
+      ]
+    },
+    "AMPLIFY_function_tasktracker13layerdc063c97_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "tasktracker13layerdc063c97"
+        }
+      ]
+    },
+    "AMPLIFY_function_tasktracker13layerdc063c97_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "tasktracker13layerdc063c97"
+        }
+      ]
+    }
+  }
+}
