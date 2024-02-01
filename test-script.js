@@ -1,4 +1,4 @@
-import { handler } from './one.js'; // Replace with the actual file name
+import { handler } from './one.mjs'; // Replace with the actual file name
 
 handler()
     .then(response => console.log(response))
