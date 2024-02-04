@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@aws-amplify/backend": "^0.10.2",
     "@aws-sdk/client-dynamodb": "^3.496.0",
     "@aws-sdk/client-ssm": "^3.502.0",
     "dotenv": "^16.4.1",

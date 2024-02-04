@@ -1,85 +1,25 @@
 {
-  "function": {
-    "tasktracker13ec267b61": {
-      "build": true,
-      "dependsOn": [],
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    },
-    "tasktracker13f9ea9c07": {
-      "build": true,
-      "dependsOn": [],
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    },
-    "tasktracker13layerdc063c97": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "LambdaLayer"
+  "hosting": {
+    "amplifyhosting": {
+      "lastPushTimeStamp": "2024-02-04T05:26:28.444Z",
+      "service": "amplifyhosting",
+      "type": "cicd"
     }
   },
   "parameters": {
-    "AMPLIFY_function_tasktracker13ec267b61_deploymentBucketName": {
+    "AMPLIFY_hosting_amplifyhosting_appId": {
       "usedBy": [
         {
-          "category": "function",
-          "resourceName": "tasktracker13ec267b61"
+          "category": "hosting",
+          "resourceName": "amplifyhosting"
         }
       ]
     },
-    "AMPLIFY_function_tasktracker13ec267b61_s3Key": {
+    "AMPLIFY_hosting_amplifyhosting_type": {
       "usedBy": [
         {
-          "category": "function",
-          "resourceName": "tasktracker13ec267b61"
-        }
-      ]
-    },
-    "AMPLIFY_function_tasktracker13ec267b61_secretsPathAmplifyAppId": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "tasktracker13ec267b61"
-        }
-      ]
-    },
-    "AMPLIFY_function_tasktracker13f9ea9c07_deploymentBucketName": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "tasktracker13f9ea9c07"
-        }
-      ]
-    },
-    "AMPLIFY_function_tasktracker13f9ea9c07_s3Key": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "tasktracker13f9ea9c07"
-        }
-      ]
-    },
-    "AMPLIFY_function_tasktracker13f9ea9c07_secretsPathAmplifyAppId": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "tasktracker13f9ea9c07"
-        }
-      ]
-    },
-    "AMPLIFY_function_tasktracker13layerdc063c97_deploymentBucketName": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "tasktracker13layerdc063c97"
-        }
-      ]
-    },
-    "AMPLIFY_function_tasktracker13layerdc063c97_s3Key": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "tasktracker13layerdc063c97"
+          "category": "hosting",
+          "resourceName": "amplifyhosting"
         }
       ]
     }
