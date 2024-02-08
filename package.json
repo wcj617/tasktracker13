@@ -11,6 +11,7 @@
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.496.0",
     "@aws-sdk/client-ssm": "^3.502.0",
+    "@aws-sdk/lib-dynamodb": "^3.509.0",
     "chart.js": "^4.4.1",
     "dotenv": "^16.4.1",
     "next": "13.5.6",

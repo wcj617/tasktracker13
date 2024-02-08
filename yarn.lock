@@ -84,7 +84,7 @@
     "@aws-sdk/util-utf8-browser" "^3.0.0"
     tslib "^1.11.1"
 
-"@aws-sdk/client-dynamodb@^3.496.0":
+"@aws-sdk/client-dynamodb@^3.0.0", "@aws-sdk/client-dynamodb@^3.496.0":
   version "3.496.0"
   resolved "https://registry.npmjs.org/@aws-sdk/client-dynamodb/-/client-dynamodb-3.496.0.tgz"
   integrity sha512-cMZpOwlpJoCUaJvsdkRJnUd5WueE3bsOVlogfh0yo1BxDKGMec63isYGIQpPRgEAnNS2LAURPzrEUFGRtwQrNQ==
@@ -579,6 +579,16 @@
     mnemonist "0.38.3"
     tslib "^2.5.0"
 
+"@aws-sdk/lib-dynamodb@^3.509.0":
+  version "3.509.0"
+  resolved "https://registry.npmjs.org/@aws-sdk/lib-dynamodb/-/lib-dynamodb-3.509.0.tgz"
+  integrity sha512-jKcQQ7qBWllD4QNY0VNm5vanCs1yWTD8QA6sSWQQUHl2TpUOyklV9ghCGhtQXbb0ppH0az0oVrFaz0z7+whlWQ==
+  dependencies:
+    "@aws-sdk/util-dynamodb" "3.509.0"
+    "@smithy/smithy-client" "^2.3.1"
+    "@smithy/types" "^2.9.1"
+    tslib "^2.5.0"
+
 "@aws-sdk/middleware-endpoint-discovery@3.496.0":
   version "3.496.0"
   resolved "https://registry.npmjs.org/@aws-sdk/middleware-endpoint-discovery/-/middleware-endpoint-discovery-3.496.0.tgz"
@@ -777,6 +787,13 @@
   integrity sha512-M0DSPYe/gXhwD2QHgoukaZv5oDxhW3FfvYIrJptyqUq3OnPJBcDbihHjrE0PBtfh/9kgMZT60/fQ2NVFANfa2g==
   dependencies:
     "@smithy/types" "^2.9.1"
+    tslib "^2.5.0"
+
+"@aws-sdk/util-dynamodb@3.509.0":
+  version "3.509.0"
+  resolved "https://registry.npmjs.org/@aws-sdk/util-dynamodb/-/util-dynamodb-3.509.0.tgz"
+  integrity sha512-wvlcYicawWCwvklfpTJrLn+S2oTfpOG4Q/uWvQJgv3Z3SVr5Yp3OjUvMKCRUGVu1r+thedvx6LZWecoGXfQivA==
+  dependencies:
     tslib "^2.5.0"
 
 "@aws-sdk/util-endpoints@3.496.0":
