@@ -1,5 +1,6 @@
+'use client'
 // Analytics/layout.js
-export default function AnalyticsLayout({ children }) {
+export default function analyticsLayout({ children }) {
     return (
         <div>
             <header>

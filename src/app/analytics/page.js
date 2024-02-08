@@ -1,28 +1,24 @@
+"use client"
 // Analytics/page.js
 import React, { useEffect, useState } from 'react';
 import Histogram from '../components/Histogram';
-import AnalyticsLayout from './layout';
 
-function AnalyticsPage() {
-    const [data, setData] = useState(null);
+export default function analyticsPage() {
+    const [chartData, setChartData ] = useState({ labels: [], datasets: [] });
 
     useEffect(() => {
-        async function fetchData() {
-            const response = await fetch('/api/data'); // Adjust this to your API endpoint
-            const result = await response.json();
-            setData(result);
-        }
+        // Simulate fetching data
+        const fetchData = async () => {
+            const response = await fetch('/api/analytics'); // Your API endpoint to fetch data
+            const { data } = await response.json();
+        };
         fetchData();
     }, []);
 
     return (
-        <AnalyticsLayout>
-            <div>
-                <h1>Analytics</h1>
-                {data && <Histogram data={data} />}
-            </div>
-        </AnalyticsLayout>
+        <div>
+            <h1>Analytics Dashboard</h1>
+            <Histogram chartData={chartData}/>
+        </div>
     );
 }
-
-export default AnalyticsPage;
