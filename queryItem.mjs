@@ -1,8 +1,8 @@
-import { DynamoDBClient}  from "@aws-sdk/client-dynamodb";
+import { DynamoDBClient, GetItemCommand}  from "@aws-sdk/client-dynamodb";
 import {SSMClient, GetParametersCommand } from "@aws-sdk/client-ssm"
 import {DynamoDBDocumentClient, GetCommand} from "@aws-sdk/lib-dynamodb";
 
-export default async function handler (req, res) {
+export default async function handler () {
 
     const Sclient = new SSMClient({region: 'us-west-2'});
     const input = {
@@ -36,11 +36,15 @@ export default async function handler (req, res) {
             },
         });
         const item = await docClient.send(queryCommand);
-        const {StartTime, EndTime } = item.Item;
+        // Extracting StartTime and EndTime
+        const { StartTime, EndTime } = item.Item;
         console.log(item);
-        res.status(200).json({data: "Your fetched data"});
+        console.log("StartTime:", StartTime);
+        console.log("EndTime:", EndTime);
+
     } catch (err) {
         console.error("DynamoDB fetch Error:", err);
-        res.status(500).json({ error: "Failed to fetch data"});
     }
-}
+};
+
+handler();

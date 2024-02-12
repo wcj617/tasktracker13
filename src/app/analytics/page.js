@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Histogram from '../components/Histogram';
 
-export default function analyticsPage() {
+export default function AnalyticsPage() {
     const [chartData, setChartData ] = useState({ labels: [], datasets: [] });
 
     useEffect(() => {
@@ -11,6 +11,7 @@ export default function analyticsPage() {
         const fetchData = async () => {
             const response = await fetch('/api/analytics'); // Your API endpoint to fetch data
             const { data } = await response.json();
+            setChartData(data);
         };
         fetchData();
     }, []);
