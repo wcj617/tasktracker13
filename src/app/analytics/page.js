@@ -1,25 +1,26 @@
-"use client"
-// Analytics/page.js
-import React, { useEffect, useState } from 'react';
 import Histogram from '../components/Histogram';
-
-export default function AnalyticsPage() {
-    const [chartData, setChartData ] = useState({ labels: [], datasets: [] });
-
-    useEffect(() => {
-        // Simulate fetching data
-        const fetchData = async () => {
-            const response = await fetch('/api/analytics'); // Your API endpoint to fetch data
-            const { data } = await response.json();
-            setChartData(data);
-        };
-        fetchData();
-    }, []);
+import DataList from './DataList';
+import useSWR from "swr"
+import { headers } from 'next/headers'
+// const fetcher = url => fetch(url).then(r => r.json());
+export default async function AnalyticsPage() {
+    // const {data, error} = useSWR('api/loadData', fetcher);
+    const data = await getData();
 
     return (
         <div>
-            <h1>Analytics Dashboard</h1>
-            <Histogram chartData={chartData}/>
+            <h1>Anayltics DashBboard</h1>
+            <DataList item={data}/>
         </div>
     );
+}
+
+ async function getData() {
+    const host = headers().get("host");
+    const res = await fetch(`http://${host}/api/loadData`);
+
+    if (!res.ok) {
+        throw new Error('Error to fetch data')
+    }
+    return res.json()
 }

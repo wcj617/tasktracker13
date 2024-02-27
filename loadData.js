@@ -1,20 +1,23 @@
-import { DynamoDBClient}  from "@aws-sdk/client-dynamodb";
-import {SSMClient, GetParametersCommand } from "@aws-sdk/client-ssm"
+import {DynamoDBClient} from "@aws-sdk/client-dynamodb";
+import {GetParametersCommand, SSMClient} from "@aws-sdk/client-ssm"
 import {DynamoDBDocumentClient, GetCommand} from "@aws-sdk/lib-dynamodb";
+import * as dotenv from 'dotenv'
+dotenv.config();
 
-export default async function handler (req, res) {
 
-    const Sclient = new SSMClient({region: 'us-west-2'});
-    const input = {
-        Names: ["/amplify/d254nr5j21j7oa/dev/NEXT_PUBLIC_AWS_ACCESS_KEY_ID", "/amplify/d254nr5j21j7oa/dev/NEXT_PUBLIC_AWS_SECRET_ACCESS_KEY"],
-        WithDecryption: true,
-    };
+export default async function handler(req, res) {
 
-    const command = new GetParametersCommand(input);
     try {
 
-        const response = await Sclient.send(command);
-        const extractedValues = response.Parameters.map(parameter => parameter.Value);
+        const Sclient = new SSMClient({region: 'us-west-2'});
+        const input = {
+            Names: ["/amplify/d254nr5j21j7oa/dev/NEXT_PUBLIC_AWS_ACCESS_KEY_ID", "/amplify/d254nr5j21j7oa/dev/NEXT_PUBLIC_AWS_SECRET_ACCESS_KEY"],
+            WithDecryption: true,
+        };
+
+        const command = new GetParametersCommand(input);
+        const value = await Sclient.send(command);
+        const extractedValues = value.Parameters.map(parameter => parameter.Value);
 
         const REGION = "us-west-2"; // e.g. "us-east-1"
 // Create an Amazon DynamoDB service client object.
@@ -36,11 +39,11 @@ export default async function handler (req, res) {
             },
         });
         const item = await docClient.send(queryCommand);
-        const {StartTime, EndTime } = item.Item;
+        // const {StartTime, EndTime } = item.Item;
         console.log(item);
-        res.status(200).json({data: "Your fetched data"});
+        // return await item.json();
+        res.status(200).json({item});
     } catch (err) {
         console.error("DynamoDB fetch Error:", err);
-        res.status(500).json({ error: "Failed to fetch data"});
     }
 }
