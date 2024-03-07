@@ -9,12 +9,12 @@ export default function Logo (){
     const updateWidth = () => {
         const newWidth = window.innerWidth;
         setWidth(newWidth);
-        return () => window.removeEventListener('resize', updateWidth);
     };
 
     useEffect(() => {
         window.addEventListener('resize', updateWidth);
         updateWidth();
+        return () => window.removeEventListener('resize', updateWidth);
     }, []);
 
     const [showButton, setShowButton] = useState(false);
