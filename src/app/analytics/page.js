@@ -1,4 +1,3 @@
-import Histogram from '../components/Histogram';
 import DataList from './DataList';
 import useSWR from "swr"
 import { headers } from 'next/headers'

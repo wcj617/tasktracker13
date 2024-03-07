@@ -60,7 +60,6 @@ export default function DataList({ item }){
                 display: true,
                 text: 'Task tracker',
             },
-
         },
         scales: {
             y: {

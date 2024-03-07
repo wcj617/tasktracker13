@@ -39,13 +39,7 @@ export async function GET() {
             },
         });
         const item = await docClient.send(queryCommand);
-        // const {StartTime, EndTime } = item.Item;
-        // console.log(item);
-        // return await item.json();
-        // console.error(item);
-        // return Response.status(200).json(item);
-        // return new Response.json({item})
-        // return res.json({StartTime, EndTime});
+
         return Response.json({item});
     } catch (err) {
         console.error("DynamoDB fetch Error:", err);
